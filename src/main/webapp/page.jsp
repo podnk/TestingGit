@@ -7,12 +7,6 @@
 	<title>PAGE.JSP</title>
 </head>
 <body>
-	<%
-		String login = request.getParameter("login");
-		String password = request.getParameter("password");
-	%>
-	
-	<%= login %>
-	<%= password %>
+	this is page jsp file
 </body>
 </html>
