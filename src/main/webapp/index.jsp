@@ -4,15 +4,11 @@
 <title>Заголовок</title>
 <body>
 <h2>Главная страница</h2>
-	<form action="myFirstUrl" method="post">
-		Логин: <input type="text" name="login"/><Br>
-		Пароль: <input type="password" name="password"/><Br>
+	<form action="selectPage" method="post">
+		Логин: <input type="text" name="loginLog"/><Br>
+		Пароль: <input type="password" name="passwordlog"/><Br>
 		<input type="submit" name="enter" value="Войти"/>
 		<input type="submit" name="register" value="Регистрация"/><Br>
-		<input type="radio" name="testRadio" value="test"/>test<Br>
 	</form>
-	
-	<b><a href="myFirstUrl">First URL</a></b>
-	
 </body>
 </html>

@@ -10,8 +10,18 @@
   	<servlet-class>servlets.MainServlet</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>logOrReg</servlet-name>
+  	<servlet-class>servlets.SelectServlet</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>firstSetvlet</servlet-name>
   	<url-pattern>/myFirstUrl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>logOrReg</servlet-name>
+  	<url-pattern>/selectPage</url-pattern>
   </servlet-mapping>
 </web-app>
