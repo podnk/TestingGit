@@ -7,19 +7,20 @@
 	<title>Регистрация</title>
 </head>
 <body>
-	<form action="" method="post">
-		Имя: <input type="text" name="name"><br/>
-		Фамилия: <input type="text" name="surname"><br/>
+
+	<form action="selectPage" method="post">
+		Имя: 		<input type="text" name="name"><br/>
+		Фамилия: 	<input type="text" name="surname"><br/>
 		Дата рождения: <input type="date" name="calendar"><br/>
-		Email: <input type="text" name="email"><br/>
-		Логин: <input type="text" name="loginReg"><br/>
-		Пароль: <input type="password" name="passwordReg"><br/>
-		Пол: <select name="sex">
-				<option>Мужской</option>
-				<option>Женский</option>
-			</select>
-		<input type="submit" name="finishReg" value="Зарегистрироваться"><br/>
-		
+		Email:		<input type="text" name="email"><br/>
+		Логин: 		<input type="text" name="loginReg"><br/>
+		Пароль: 	<input type="password" name="passwordReg"><br/>
+		Пол:	<select name="sex">
+					<option>Мужской</option>
+					<option>Женский</option>
+				</select>
+		<input type="submit" name="finishReg" value="Зарегистрироваться"><br/>		
 	</form>
+	
 </body>
 </html>

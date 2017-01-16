@@ -2,9 +2,9 @@
 	pageEncoding="UTF-8"%>
 	
 <html>
-	<title>Заголовок</title>
+	<title>Домашняя страница</title>
 <body>
-<h2>Главная страница</h2>
+	<h2>Добро пожаловать!</h2>
 
 	<form action="selectPage" method="post">
 		Логин: 	<input type="text" 		name="loginLog"/><Br>

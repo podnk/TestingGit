@@ -16,11 +16,11 @@
 		String sex;
 	%>
 	
-	Имя: <%= name %>
-	Фамилия: <%= surname %>
-	Email: <%= email %>
-	Дата рождения: <%= birthday %>
-	Пол: <%= sex %>
+	Имя: 			<%= name %>
+	Фамилия: 		<%= surname %>
+	Email: 			<%= email %>
+	Дата рождения: 	<%= birthday %>
+	Пол: 			<%= sex %>
 	
 </body>
 </html>
