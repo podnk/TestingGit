@@ -18,9 +18,12 @@
 		Пол:	<select name="sex">
 					<option>Мужской</option>
 					<option>Женский</option>
-				</select>
-		<input type="submit" name="finishReg" value="Зарегистрироваться"><br/>		
-	</form>
+				</select><br/>
+		Получать новостную рассылку: <input type="checkbox" name="news" value="news"><Br>
+		Я прочел и согласен с условиями <a href="devilsContract.txt">пользовательского соглашения:</a>
+		<input type="checkbox" name="licence" value="licence"><Br>
+		<input type="submit" name="finishReg" value="Зарегистрироваться"><br/>
+	</form><br/>(все поля являются обязательными для заполнения)<br/>
 	
 </body>
 </html>
