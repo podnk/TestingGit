@@ -1,7 +1,6 @@
 package servlets;
 
-	import java.io.IOException;
-
+import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,11 +11,9 @@ public class ForwardServlet extends HttpServlet
 {
 	private static final long serialVersionUID = 7396539970228569232L;
 	
-	public void forward(String forwardTo, HttpServletRequest req, 
-			HttpServletResponse resp)
+	public void forward(String forwardTo, HttpServletRequest req, HttpServletResponse resp)
 	{
-		RequestDispatcher requestDispatcher = 
-				getServletContext().getRequestDispatcher(forwardTo);
+		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher(forwardTo);
 		
 		try
 		{
@@ -25,5 +22,4 @@ public class ForwardServlet extends HttpServlet
 		catch (ServletException e){}
 		catch (IOException e){}
 	}
-
 }

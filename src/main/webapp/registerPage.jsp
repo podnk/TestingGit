@@ -14,9 +14,10 @@
 		Email: <input type="text" name="email"><br/>
 		Логин: <input type="text" name="loginReg"><br/>
 		Пароль: <input type="password" name="passwordReg"><br/>
-		Пол: <br/>
-		<input type="radio" name="sexMale" value="Мужской">Мужской<br/>
-		<input type="radio" name="sexFemale" value="Женский">Женский<br/>
+		Пол: <select name="sex">
+				<option>Мужской</option>
+				<option>Женский</option>
+			</select>
 		<input type="submit" name="finishReg" value="Зарегистрироваться"><br/>
 		
 	</form>

@@ -4,13 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Личный кабинет</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<a href="myOrders.jsp">Мои заказы</a>
-	<a href="myProfile.jsp">Мой профиль</a>
-	<a href="messages.jsp">Сообщения</a>
-	<a href="shoppingCart.jsp">Корзина</a>
-	<a href="logout.jsp">Выйти</a>
+
 </body>
 </html>

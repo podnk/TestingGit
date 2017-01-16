@@ -10,15 +10,13 @@ public class SelectServlet extends ForwardServlet
 	private static final long serialVersionUID = -5826735542762688442L;
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
-			throws ServletException, IOException
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 		doPost(req, resp);
 	}
 	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
-			throws ServletException, IOException
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 		if(req.getParameter("enter") != null)
 		{
@@ -27,6 +25,10 @@ public class SelectServlet extends ForwardServlet
 		else if (req.getParameter("register") != null)
 		{
 			super.forward("/registerPage.jsp", req, resp);
+		}
+		else if (req.getParameter("finishReg") != null) 
+		{
+			super.forward("/regConfirm.jsp", req, resp);
 		}
 	}
 }
