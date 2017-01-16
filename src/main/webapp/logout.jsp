@@ -7,6 +7,12 @@
 	<title>Выход</title>
 </head>
 <body>
-	<center><h2>Всего хорошего!</h2></center>	
+	<center>
+		<h2>
+			<b>
+				Всего хорошего!
+			</b>			
+		</h2>
+	</center>	
 </body>
 </html>

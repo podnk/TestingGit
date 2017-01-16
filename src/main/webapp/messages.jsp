@@ -7,6 +7,10 @@
 	<title>Сообщения</title>
 </head>
 <body>
-
+	<a href="page.jsp">Входящие</a><br/>
+	<a href="page.jsp">Исходящие</a><br/>
+	<a href="page.jsp">Непрочитанные</a><br/>
+	<a href="page.jsp">Черновики</a><br/>
+	<a href="page.jsp">Удаленные</a><br/>
 </body>
 </html>
