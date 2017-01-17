@@ -15,6 +15,11 @@
   	<servlet-class>servlets.SelectServlet</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>sessionServlet</servlet-name>
+  	<servlet-class>servlets.SessionServlet</servlet-class>
+  </servlet>
+  
  <!-- _______________________________________________________________ -->
  
   <servlet-mapping>
@@ -25,5 +30,10 @@
   <servlet-mapping>
   	<servlet-name>logOrReg</servlet-name>
   	<url-pattern>/selectPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>sessionServlet</servlet-name>
+  	<url-pattern>/sessionPage</url-pattern>
   </servlet-mapping>
 </web-app>
