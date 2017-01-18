@@ -6,11 +6,11 @@
 <body>
 	<h2>Добро пожаловать!</h2>
 
-	<form action="setSession.jsp" method="post">
-		Логин: 	<input type="text" 		name="loginLog"/><Br>
-		Пароль: <input type="password" 	name="passwordLog"/><Br>
+	<form action="sessionPage" method="post">
+		Логин: 	<input type="text" 		name="loginLog"/> <Br>
+		Пароль: <input type="password" 	name="passwordLog"/> <Br>
 				<input type="submit" 	name="enter" 	value="Войти"/>
-				<input type="submit" 	name="register" value="Регистрация"/><Br>
+				<input type="submit" 	name="register" value="Регистрация"/> <Br>
 	</form>
 	
 </body>

@@ -19,10 +19,8 @@ public class SessionServlet extends HttpServlet
 		HttpSession session = request.getSession();	
 		
 		String loginLog = (String) request.getAttribute("loginLog");
-		String passwordLog = (String) request.getAttribute("passwordLog");
 		
 		session.setAttribute("loginLog", loginLog);
-		session.setAttribute("passwordLog", passwordLog);
 				
 		RequestDispatcher dispatcher = request.getRequestDispatcher("showSession.jsp");
 		dispatcher.forward(request, response);
