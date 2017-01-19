@@ -9,25 +9,23 @@ import java.util.Properties;
 
 public class DBConnection 
 {
-	private String host; 		private String user; 
-	private String password; 	private String nameDB;
 	private String url;
+	private String name;
+	private String password;
 	
+	private Connection connection;
 	private Properties properties = new Properties();
-	private Connection postgresConnection;
 	
-	public DBConnection(String host, String user, String password, String nameDB)
+	public DBConnection(Properties properties)
 	{
-		this.host = host;
-		this.user = user;
-		this.password = password;
-		this.nameDB = nameDB;
+		this.properties = properties;
 	}
 	
-	public DBConnection(String url, Properties properties)
+	public DBConnection(String url, String name, String password)
 	{
 		this.url = url;
-		this.properties = properties;
+		this.name = name;
+		this.password = password;
 	}
 	
 	public void init()
@@ -35,39 +33,40 @@ public class DBConnection
 		try
 		{
 			Class.forName("org.postgresql.Driver");
-			postgresConnection = DriverManager.getConnection(url);
+			connection = DriverManager.getConnection(url, name, password);
 		}
 		catch(ClassNotFoundException cnfe){}
 		catch (SQLException sqle){}
 	}
 	
-	public void initProperties()
-	{
-		url = "jdbc:postgresql://" + host + "/" + nameDB;
-		
-		properties.setProperty("user", user);
-		properties.setProperty("password", password);
-		properties.setProperty("characterEncoding", "UTF-8");
-		properties.setProperty("useUnicode", "true");
-		
-		System.out.println("URL: " + url);
-	}
-	
 	public void closeConnection()
-	{
-		try{postgresConnection.close();}
-		catch (Exception ex){}
+	{ 
+		try
+		{ 
+			connection.close(); 
+		}
+		catch (Exception ex){} 
 	}
 	
-	public ResultSet query(String queryString)
+	public ResultSet query(String sqlExecute)
 	{
 		ResultSet result = null;
 		try
 		{
-			Statement statement = postgresConnection.createStatement();
-			statement.executeQuery(queryString);
+			Statement statement = connection.createStatement();
+			result = statement.executeQuery(sqlExecute);
 		}
-		catch (SQLException sqlex){}
+		catch (SQLException ex){}
 		return result;
+	}
+	
+	public void updateQuery(String sqlUpdate)
+	{
+		try
+		{
+			Statement statement = connection.createStatement();
+			statement.executeUpdate(sqlUpdate);
+		}
+		catch (SQLException ex){}
 	}
 }

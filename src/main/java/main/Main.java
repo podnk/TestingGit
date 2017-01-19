@@ -1,25 +1,26 @@
 package main;
 
-import java.util.Properties;
-
+import java.sql.ResultSet;
 import connection.DBConnection;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-		String url = "jdbc:postgresql://localhost:5432/postgres";
+		String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
 		
-		Properties properties = new Properties();		
-		properties.setProperty("user", "");
-		properties.setProperty("password", "");
-		properties.setProperty("characterEncoding", "UTF-8");
-		properties.setProperty("useUnicode", "true");
+		DBConnection conn = new DBConnection(url, "postgres", "");
+		conn.init();
 		
-		System.out.println("URL: " + url);
-		
-		DBConnection dbConnection = new DBConnection(url, properties);
-		dbConnection.init();
-		dbConnection.query("select * from eployees");
+		try
+		{
+			ResultSet resultSet = conn.query("SELECT * FROM employees");
+			
+			while(resultSet.next())
+			{
+				System.out.println(resultSet.getString("name"));
+			}
+		} 
+		catch (Exception e){}
 	}
 }
