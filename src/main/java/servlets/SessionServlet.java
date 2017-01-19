@@ -13,24 +13,24 @@ public class SessionServlet extends HttpServlet
 	private static final long serialVersionUID = -3650451697995446344L;
 	
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
-		HttpSession session = request.getSession();	
+		HttpSession session = req.getSession();	
 		
-		String loginLog = (String) request.getAttribute("loginLog");
+		String loginLog = (String) req.getParameter("loginLog");
+		String passwordLog = (String) req.getParameter("passwordLog");
 		
 		session.setAttribute("loginLog", loginLog);
-				
-		RequestDispatcher dispatcher = request.getRequestDispatcher("showSession.jsp");
-		dispatcher.forward(request, response);
+		session.setAttribute("passwordLog", passwordLog);
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("showSession.jsp");
+		dispatcher.forward(req, resp);
 	}
 	
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
-		super.doPost(request, response);
+		super.doPost(req, resp);
 	}
 
 }

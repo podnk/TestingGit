@@ -19,8 +19,6 @@
   	<servlet-name>sessionServlet</servlet-name>
   	<servlet-class>servlets.SessionServlet</servlet-class>
   </servlet>
-  
- <!-- _______________________________________________________________ -->
  
   <servlet-mapping>
   	<servlet-name>firstSetvlet</servlet-name>
